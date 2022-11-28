@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "726818100234",
+    "project_id": "chatbot1-99437",
+    "storage_bucket": "chatbot1-99437.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726818100234:android:f21fb82017d5283da3fbf3",
+        "android_client_info": {
+          "package_name": "com.example.newchatbot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726818100234-mbrg3tb4bvdc4e8es2cjtu876k3jpta8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxA5n0BGhZynV1VNxdjOUIYgHn3CRd6ok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726818100234-mbrg3tb4bvdc4e8es2cjtu876k3jpta8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
