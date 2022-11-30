@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "/Users/hawraalomani/FlutterProjects/chatbot/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml",
             "map": [
                 {
                     "source": "/Users/hawraalomani/.gradle/caches/transforms-3/297942c3957902ff7659eb1bc47c3617/transformed/browser-1.4.0/res/values-en-rGB/values-en-rGB.xml",

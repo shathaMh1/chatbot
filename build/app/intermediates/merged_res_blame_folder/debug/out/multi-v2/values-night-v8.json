@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/hawraalomani/FlutterProjects/chatbot/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/hawraalomani/FlutterProjects/chatbot/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
