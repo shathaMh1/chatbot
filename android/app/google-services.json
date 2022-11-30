@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "590502566232",
+    "project_id": "chatbottemplate-efacc",
+    "storage_bucket": "chatbottemplate-efacc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590502566232:android:af4c5af7515fc5f1146d2d",
+        "android_client_info": {
+          "package_name": "com.example.chatbot_template"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "590502566232-1gjkddfrb8d8d4rp9g9tr03gg00aknft.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAi6uTW7Z4_dxZybXVhEPvp06cLAAOW_Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "590502566232-1gjkddfrb8d8d4rp9g9tr03gg00aknft.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "590502566232-gcl3ou5l8h060nqcnd0ai7166418ds7d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatbotTemplate"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
