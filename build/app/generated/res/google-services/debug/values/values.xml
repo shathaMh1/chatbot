@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="default_web_client_id" translatable="false">726818100234-mbrg3tb4bvdc4e8es2cjtu876k3jpta8.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">726818100234</string>
-    <string name="google_api_key" translatable="false">AIzaSyBxA5n0BGhZynV1VNxdjOUIYgHn3CRd6ok</string>
-    <string name="google_app_id" translatable="false">1:726818100234:android:f21fb82017d5283da3fbf3</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBxA5n0BGhZynV1VNxdjOUIYgHn3CRd6ok</string>
-    <string name="google_storage_bucket" translatable="false">chatbot1-99437.appspot.com</string>
-    <string name="project_id" translatable="false">chatbot1-99437</string>
+    <string name="default_web_client_id" translatable="false">590502566232-1gjkddfrb8d8d4rp9g9tr03gg00aknft.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">590502566232</string>
+    <string name="google_api_key" translatable="false">AIzaSyDAi6uTW7Z4_dxZybXVhEPvp06cLAAOW_Y</string>
+    <string name="google_app_id" translatable="false">1:590502566232:android:af4c5af7515fc5f1146d2d</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDAi6uTW7Z4_dxZybXVhEPvp06cLAAOW_Y</string>
+    <string name="google_storage_bucket" translatable="false">chatbottemplate-efacc.appspot.com</string>
+    <string name="project_id" translatable="false">chatbottemplate-efacc</string>
 </resources>

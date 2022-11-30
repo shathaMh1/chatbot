@@ -1,4 +1,4 @@
-com.example.newchatbot
+com.example.chatbot_template
 attr activityAction
 attr activityName
 attr alpha

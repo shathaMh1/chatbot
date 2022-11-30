@@ -1,8 +1,8 @@
-import 'package:newchatbot/controller/bottom_bar_controller.dart';
-import 'package:newchatbot/view/home_screen.dart';
-import 'package:newchatbot/view/profile_screen.dart';
-import 'package:newchatbot/view/settings_screen.dart';
-import 'package:newchatbot/view/trending_screen.dart';
+import 'package:chatbot_template/controller/bottom_bar_controller.dart';
+import 'package:chatbot_template/view/home_screen.dart';
+import 'package:chatbot_template/view/profile_screen.dart';
+import 'package:chatbot_template/view/settings_screen.dart';
+import 'package:chatbot_template/view/trending_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -1,4 +1,4 @@
-import 'package:newchatbot/constants/constants.dart';
+import 'package:chatbot_template/constants/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 

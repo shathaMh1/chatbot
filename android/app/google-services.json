@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "726818100234",
-    "project_id": "chatbot1-99437",
-    "storage_bucket": "chatbot1-99437.appspot.com"
+    "project_number": "590502566232",
+    "project_id": "chatbottemplate-efacc",
+    "storage_bucket": "chatbottemplate-efacc.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:726818100234:android:f21fb82017d5283da3fbf3",
+        "mobilesdk_app_id": "1:590502566232:android:af4c5af7515fc5f1146d2d",
         "android_client_info": {
-          "package_name": "com.example.newchatbot"
+          "package_name": "com.example.chatbot_template"
         }
       },
       "oauth_client": [
         {
-          "client_id": "726818100234-mbrg3tb4bvdc4e8es2cjtu876k3jpta8.apps.googleusercontent.com",
+          "client_id": "590502566232-1gjkddfrb8d8d4rp9g9tr03gg00aknft.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBxA5n0BGhZynV1VNxdjOUIYgHn3CRd6ok"
+          "current_key": "AIzaSyDAi6uTW7Z4_dxZybXVhEPvp06cLAAOW_Y"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "726818100234-mbrg3tb4bvdc4e8es2cjtu876k3jpta8.apps.googleusercontent.com",
+              "client_id": "590502566232-1gjkddfrb8d8d4rp9g9tr03gg00aknft.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "590502566232-gcl3ou5l8h060nqcnd0ai7166418ds7d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatbotTemplate"
+              }
             }
           ]
         }

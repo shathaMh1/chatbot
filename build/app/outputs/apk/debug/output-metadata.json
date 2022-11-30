@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.newchatbot",
+  "applicationId": "com.example.chatbot_template",
   "variantName": "debug",
   "elements": [
     {

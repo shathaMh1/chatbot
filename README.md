@@ -1,4 +1,4 @@
-# newchatbot
+# chatbot_template
 
 A new Flutter project.
 

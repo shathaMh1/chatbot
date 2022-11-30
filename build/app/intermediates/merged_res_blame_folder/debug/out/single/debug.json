@@ -1,26 +1,26 @@
 [
     {
-        "merged": "/Users/shathaalenzi/Desktop/newchatbot/build/app/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/Users/shathaalenzi/Desktop/newchatbot/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+        "merged": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/build/app/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/shathaalenzi/Desktop/newchatbot/build/app/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/Users/shathaalenzi/Desktop/newchatbot/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/build/app/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/shathaalenzi/Desktop/newchatbot/build/app/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/Users/shathaalenzi/Desktop/newchatbot/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/build/app/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/shathaalenzi/Desktop/newchatbot/build/app/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/Users/shathaalenzi/Desktop/newchatbot/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/build/app/intermediates/merged_res/debug/drawable-v21_launch_background.xml.flat",
+        "source": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/android/app/src/main/res/drawable-v21/launch_background.xml"
     },
     {
-        "merged": "/Users/shathaalenzi/Desktop/newchatbot/build/app/intermediates/merged_res/debug/drawable-v21_launch_background.xml.flat",
-        "source": "/Users/shathaalenzi/Desktop/newchatbot/android/app/src/main/res/drawable-v21/launch_background.xml"
+        "merged": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/build/app/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/shathaalenzi/Desktop/newchatbot/build/app/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/shathaalenzi/Desktop/newchatbot/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/build/app/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     }
 ]

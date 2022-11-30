@@ -1,7 +1,7 @@
-import 'package:newchatbot/constants/constants.dart';
-import 'package:newchatbot/controller/login_controller.dart';
-import 'package:newchatbot/view/chat_screen.dart';
-import 'package:newchatbot/view/login_screen.dart';
+import 'package:chatbot_template/constants/constants.dart';
+import 'package:chatbot_template/controller/login_controller.dart';
+import 'package:chatbot_template/view/chat_screen.dart';
+import 'package:chatbot_template/view/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';

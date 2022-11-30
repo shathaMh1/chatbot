@@ -1,4 +1,4 @@
-import 'package:newchatbot/constants/constants.dart';
+import 'package:chatbot_template/constants/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>726818100234-oe5qqkevic8q5tgjgj21vbjl36eo9d8d.apps.googleusercontent.com</string>
+	<string>590502566232-gcl3ou5l8h060nqcnd0ai7166418ds7d.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.726818100234-oe5qqkevic8q5tgjgj21vbjl36eo9d8d</string>
+	<string>com.googleusercontent.apps.590502566232-gcl3ou5l8h060nqcnd0ai7166418ds7d</string>
 	<key>API_KEY</key>
-	<string>AIzaSyA2qDaJIBV2wyuRuOocdig6vV5Hr0CcShs</string>
+	<string>AIzaSyDKD8QC4cF4Be_JaFi71cyxsRoQGrTbcEI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>726818100234</string>
+	<string>590502566232</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.newchatbot</string>
+	<string>com.example.chatbotTemplate</string>
 	<key>PROJECT_ID</key>
-	<string>chatbot1-99437</string>
+	<string>chatbottemplate-efacc</string>
 	<key>STORAGE_BUCKET</key>
-	<string>chatbot1-99437.appspot.com</string>
+	<string>chatbottemplate-efacc.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:726818100234:ios:e9a65998f9fab20ea3fbf3</string>
+	<string>1:590502566232:ios:013f993ea5eb9fb1146d2d</string>
 </dict>
 </plist>
