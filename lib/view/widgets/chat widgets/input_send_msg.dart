@@ -16,6 +16,8 @@ class InputMsg extends StatelessWidget {
                   width: 1, color: Color.fromRGBO(243, 244, 246, 1))),
         ),
         child: TextField(
+            keyboardType: TextInputType.multiline,
+            maxLines: null,
             style: const TextStyle(color: kBlackColor),
             cursorColor: kBlackColor,
             decoration: InputDecoration(

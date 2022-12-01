@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		hmMHSQlDjYoAUKs+obsgWNcLURg=
+		3qwki+qyv4MCmftfWSLyYWILhQQ=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		c3tmhjEK/3BhO3UGl2/m6CSOd/U=
+		F+m1tSXjXdObaA+GYZ7mNy7lyUo=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		Zza4zBkxzrivnJovJB/8bw6DJF4=
+		7YN3JMeUZVvWYYoyZjys5ELTjps=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -66,7 +66,11 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
-		DTlcqEel5Uhbe7GgOG+zMhq0kII=
+		0q0rGwPj1FpJamZUOQlgnvDJAuM=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/SendMsg.svg</key>
+		<data>
+		j4+IU+dSaDQMcQwgRfnl+u8H+Mw=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/apple.png</key>
 		<data>
@@ -110,7 +114,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		SXvygK6lRlI7wgKG4PVzVwd98Ek=
+		W0s0VUlwxEnfFIFe6ZxOaaf6+Ko=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -138,7 +142,7 @@
 		</data>
 		<key>Frameworks/FirebaseAuth.framework/FirebaseAuth</key>
 		<data>
-		m4tqw0+JuATUfLql9mVlKYlSy4w=
+		sVZOiURGyXWKK5BoOg3YXv1KCe8=
 		</data>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
 		<data>
@@ -150,7 +154,7 @@
 		</data>
 		<key>Frameworks/FirebaseCore.framework/FirebaseCore</key>
 		<data>
-		cdSso2A4ZZJgbZfTSMJm7lJ63Y8=
+		Ip/HbSHmvTMZD7q0BOQJoRPY+3U=
 		</data>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
 		<data>
@@ -174,7 +178,7 @@
 		</data>
 		<key>Frameworks/FirebaseFirestore.framework/FirebaseFirestore</key>
 		<data>
-		1OuZIzxsXTGk4slBLFOoshBZANY=
+		yypFsOpFq3r05itECVrqeulvbbc=
 		</data>
 		<key>Frameworks/FirebaseFirestore.framework/Info.plist</key>
 		<data>
@@ -473,7 +477,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			r25NVNCsOv1VuXHK6ba+6lae4yIjBKiDmKooUpTXVQk=
+			s5ziCI3iGZ5GgmubwaZu77mhBm4feuJvgUF1Gs+ldJ8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -487,14 +491,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tqQkeOqTR23CvDGmjzrxV9byChchIdEXckSabvftpzs=
+			O6ONY2COQ5o+VpetB08PIu2gV+YnT5auiJMXvlB3MNc=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oqIQLolBrufZqQw3wEujSiovv5cDD79ALc2sj6eFERM=
+			KvcgaFnH2b5TNtTtEkdmEsegMzrF34lr9fFxhQA9Oao=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -508,7 +512,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jKspaZ9w8PomrUeW6JYtXueoakiQhjTBJAb/C6VpEdE=
+			OQrIiVrkH4+4I1nchIJox7PeMFEmgDAvI0F3p1z8lDU=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/images/SendMsg.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PBZf3UUuxm283AkYBsYUb1otu5miELpcXZbFUIDC0BA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/images/apple.png</key>
@@ -585,7 +596,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DgQCH+16vuk7xwpZ8m4+sQErDt6HVM2iBZb9Sgvsj+A=
+			MBdTgTzkxNHJAYw/uHJqvoLvzVsC47tWFsmAvZfd1rk=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -634,7 +645,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			dThBQ84O42b0fsACj9AEsTB9QOozo+a7Ef/kN+vfofk=
+			7XMCAXiNXvfIR2UssVYp0BYtE0ri3lu1v/JgRIdXwZw=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseAuth.framework/Info.plist</key>
@@ -655,7 +666,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cRngV/yl93vRI7NqTBsgAby/L0YC45Dorz8Wi7t8+QU=
+			AKXT1Tt0NydGh9MbkrrWYG6OKr+9jM2yyky4Qe7RUCM=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseCore.framework/Info.plist</key>
@@ -697,7 +708,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			BbdPAulFG57MaMqdGSFw02vESvV92mdD8fY0BWSQZLk=
+			M8mTL1L4E2i0a/pKPYjGpiUCvlpRW0LyFDvMeY2/LwU=
 			</data>
 		</dict>
 		<key>Frameworks/FirebaseFirestore.framework/Info.plist</key>
