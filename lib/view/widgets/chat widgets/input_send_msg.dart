@@ -1,10 +1,15 @@
 import 'package:chatbot_template/constants/constants.dart';
+import 'package:chatbot_template/controller/chat_controller.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class InputMsg extends StatelessWidget {
-  const InputMsg({super.key});
+  final chatController = Get.put(ChatContoller());
+  final messageEditingController = TextEditingController();
 
+  InputMsg({super.key});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -16,6 +21,10 @@ class InputMsg extends StatelessWidget {
                   width: 1, color: Color.fromRGBO(243, 244, 246, 1))),
         ),
         child: TextField(
+            controller: messageEditingController,
+            onChanged: (value) {
+              chatController.message = value;
+            },
             keyboardType: TextInputType.multiline,
             maxLines: null,
             style: const TextStyle(color: kBlackColor),
@@ -35,7 +44,13 @@ class InputMsg extends StatelessWidget {
                     fit: BoxFit.scaleDown,
                   ),
                   onPressed: () {
-                    print('sending msg ..');
+                    messageEditingController.clear();
+                    chatController.firestore.collection('messages').add({
+                      'text': chatController.message,
+                      'sender': chatController.auth.currentUser!.email,
+                      'time': FieldValue.serverTimestamp(),
+                    });
+                    print('sending msg to Firestore Database ..');
                   },
                 ))),
       ),

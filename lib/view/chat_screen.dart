@@ -1,13 +1,16 @@
 import 'package:chatbot_template/constants/constants.dart';
+import 'package:chatbot_template/controller/chat_controller.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/admin_response.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/input_send_msg.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/timestamp_chat.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/user_response.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ChatScreen extends StatelessWidget {
-  const ChatScreen({super.key});
+  final chatController = Get.put(ChatContoller());
+  ChatScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,38 +49,52 @@ class ChatScreen extends StatelessWidget {
                       text: 'Today 12:00 PM',
                     ),
                   ),
-                  Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
-                        UserResponse(
-                          text:
-                              'Hello, I\'m looking for exchanging  some of the items I bought yesterday! ',
-                        ),
-                        AdminResponse(
-                          text:
-                              'Welcome to our customer services. Just a moment one of our assistants will be in touch with you shortly.',
-                        ),
-                        UserResponse(
-                          text: 'Okay',
-                        ),
-                        UserResponse(
-                          text: 'I\'m busy please hurry up!!!',
-                        ),
-                        AdminResponse(
-                          text:
-                              '(Hawra): Hello, I see that you want to exchange some of the items. Do you have your receipt?',
-                        ),
-                        UserResponse(
-                          text:
-                              'No, I think I have lost it. Is there a way to exchange without it?',
-                        ),
-                      ]),
+                  StreamBuilder<QuerySnapshot>(
+                      stream: chatController.firestore
+                          .collection('messages')
+                          .orderBy('time')
+                          .snapshots(),
+                      builder: (context, snapshot) {
+                        List<Widget> chat_messages = [];
+
+                        if (!snapshot.hasData) {
+                          // display a spinner
+                        } else {
+                          final messages = snapshot.data!.docs;
+                          for (var msg in messages) {
+                            final msgText = msg.get('text');
+                            final msgSender = msg.get(
+                                'sender'); // email of sender can be displayed for later work
+                            final msgTime = msg.get('time');
+                            
+
+                            final msgWidget =
+                                chatController.isCurrentUser(msgSender)
+                                    ? UserResponse(
+                                        text: msgText,
+                                        timeSent: chatController.timestampToDesiredFormat(msgTime),
+                                      )
+                                    : AdminResponse(
+                                        text: msgText,
+                                        // timeSent: DateTime.parse(
+                                        //         msgTime.toDate().toString())
+                                        //     .toString(),
+                                        timeSent: chatController.timestampToDesiredFormat(
+                                            msgTime),
+                                      );
+                            chat_messages.add(msgWidget);
+                          }
+                        }
+                        return Column(
+                            mainAxisAlignment: MainAxisAlignment.end,
+                            children: chat_messages);
+                      }),
                 ],
               );
             },
           ),
         ),
-        const InputMsg()
+        InputMsg()
       ]),
     );
   }

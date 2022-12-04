@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 
 class AdminResponse extends StatelessWidget {
   final String text;
+  final String timeSent;
 
   const AdminResponse({
     this.text = 'default text',
+    this.timeSent = '00:00 AM',
     Key? key,
   }) : super(key: key);
 
@@ -40,7 +42,7 @@ class AdminResponse extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.only(top: 6.0),
-            child: TimeStampChat(text: '12:24 PM'),
+            child: TimeStampChat(text: timeSent),
           ),
         ],
       ),
