@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
+import 'package:intl/intl.dart';
 
 class ChatContoller extends GetxController {
   final FirebaseFirestore firestore = FirebaseFirestore.instance;
@@ -29,22 +30,13 @@ class ChatContoller extends GetxController {
   // Time converter
 
   String timestampToDesiredFormat(msgTime) {
-    try {
-      String hour = DateTime.parse(msgTime.toDate().toString()).hour.toString();
-      int hourInteger = int.parse(hour);
-      String minutes =
-          DateTime.parse(msgTime.toDate().toString()).minute.toString();
-      String? timeOfDay = '';
-      if (hourInteger < 12 && hourInteger >= 0) {
-        timeOfDay = 'AM';
-      } else {
-        hourInteger = hourInteger - 12;
-        timeOfDay = 'PM';
-      }
-      String formatTime = '$hourInteger:$minutes $timeOfDay';
-      return formatTime;
-    } catch (e) {
-      return e.toString();
+    if (msgTime == null) {
+      String formattedTime = DateFormat('kk:mm a').format(DateTime.now());
+      return formattedTime;
+    } else {
+      var dateTime = DateTime.parse(msgTime.toDate().toString());
+      String formattedTime = DateFormat('kk:mm a').format(dateTime);
+      return formattedTime;
     }
   }
 }
