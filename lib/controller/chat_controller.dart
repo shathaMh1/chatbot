@@ -31,11 +31,11 @@ class ChatContoller extends GetxController {
 
   String timestampToDesiredFormat(msgTime) {
     if (msgTime == null) {
-      String formattedTime = DateFormat('kk:mm a').format(DateTime.now());
+      String formattedTime = DateFormat.jm().format(DateTime.now());
       return formattedTime;
     } else {
       var dateTime = DateTime.parse(msgTime.toDate().toString());
-      String formattedTime = DateFormat('kk:mm a').format(dateTime);
+      String formattedTime = DateFormat.jm().format(dateTime);
       return formattedTime;
     }
   }
