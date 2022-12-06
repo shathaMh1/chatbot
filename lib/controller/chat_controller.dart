@@ -10,7 +10,6 @@ class ChatContoller extends GetxController {
   final currentUser = FirebaseAuth.instance.currentUser!.email;
 
   //to get messages from Firestore Database
-
   void getMessagesByStreams() async {
     var snapshots = firestore.collection('messages').snapshots();
     await for (var snapshot in snapshots) {
