@@ -8,8 +8,12 @@ import 'package:get/get.dart';
 class InputMsg extends StatelessWidget {
   final chatController = Get.put(ChatContoller());
   final messageEditingController = TextEditingController();
+  final Color iconColor;
 
-  InputMsg({super.key});
+  InputMsg({
+    this.iconColor = Colors.grey,
+    Key? key,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -39,6 +43,7 @@ class InputMsg extends StatelessWidget {
                 suffixIcon: IconButton(
                   icon: SvgPicture.asset(
                     'assets/images/SendMsg.svg',
+                    color: iconColor,
                     width: 18,
                     height: 18,
                     fit: BoxFit.scaleDown,

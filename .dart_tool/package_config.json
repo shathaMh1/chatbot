@@ -152,6 +152,12 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "grouped_list",
+      "rootUri": "file:///Users/hawraalomani/development/flutter/.pub-cache/hosted/pub.dartlang.org/grouped_list-5.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http_parser",
       "rootUri": "file:///Users/hawraalomani/development/flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.2",
       "packageUri": "lib/",
@@ -302,7 +308,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-03T15:39:53.855286Z",
+  "generated": "2022-12-05T19:50:54.879278Z",
   "generator": "pub",
   "generatorVersion": "2.18.5"
 }

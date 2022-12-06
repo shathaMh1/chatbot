@@ -20,6 +20,8 @@ class ChatContoller extends GetxController {
     }
   }
 
+
+
   //check if it's the current user returns true
   bool isCurrentUser(msgSender) {
     if (currentUser == msgSender) {

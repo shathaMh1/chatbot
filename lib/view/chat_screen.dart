@@ -7,6 +7,8 @@ import 'package:chatbot_template/view/widgets/chat%20widgets/user_response.dart'
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:intl/intl.dart';
+import 'package:grouped_list/grouped_list.dart';
 
 class ChatScreen extends StatelessWidget {
   final chatController = Get.put(ChatContoller());
@@ -46,7 +48,7 @@ class ChatScreen extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 80.5),
                     child: TimeStampChat(
-                      text: 'Today 12:00 PM',
+                      text: DateFormat.yMMMd().format(DateTime.now()),
                     ),
                   ),
                   StreamBuilder<QuerySnapshot>(
@@ -56,7 +58,7 @@ class ChatScreen extends StatelessWidget {
                           .snapshots(),
                       builder: (context, snapshot) {
                         List<Widget> chat_messages = [];
-
+                        int index2 = 0;
                         if (!snapshot.hasData) {
                           // display a spinner
                         } else {
@@ -66,35 +68,52 @@ class ChatScreen extends StatelessWidget {
                             final msgSender = msg.get(
                                 'sender'); // email of sender can be displayed for later work
                             final msgTime = msg.get('time');
-                            
-
-                            final msgWidget =
-                                chatController.isCurrentUser(msgSender)
-                                    ? UserResponse(
-                                        text: msgText,
-                                        timeSent: chatController.timestampToDesiredFormat(msgTime),
-                                      )
-                                    : AdminResponse(
-                                        text: msgText,
-                                        // timeSent: DateTime.parse(
-                                        //         msgTime.toDate().toString())
-                                        //     .toString(),
-                                        timeSent: chatController.timestampToDesiredFormat(
-                                            msgTime),
-                                      );
+                            final msgWidget = chatController
+                                    .isCurrentUser(msgSender)
+                                ? UserResponse(
+                                    text: msgText,
+                                    timeSent: chatController
+                                        .timestampToDesiredFormat(msgTime),
+                                    widgetColor: Color.fromRGBO(0, 140, 180, 1),
+                                  )
+                                : AdminResponse(
+                                    text: msgText,
+                                    // timeSent: DateTime.parse(
+                                    //         msgTime.toDate().toString())
+                                    //     .toString(),
+                                    timeSent: chatController
+                                        .timestampToDesiredFormat(msgTime),
+                                  );
                             chat_messages.add(msgWidget);
+
+                            print(messages[index2].get(
+                                'time')); // trying to get time from Firestore (timestamp)
+                            index2 = index2 + 1;
                           }
                         }
                         return Column(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: chat_messages);
+
+                        // return GroupedListView<dynamic, String>(
+                        //     elements: chat_messages,
+                        //     groupBy: (element) => element['group'],
+                        //     groupSeparatorBuilder: (String groupByValue) =>
+                        //         Text(groupByValue),
+                        //     itemBuilder: (context, dynamic element) =>
+                        //         Text(element['name']),
+                        //     itemComparator: (item1, item2) => item1['name']
+                        //         .compareTo(item2['name']), // optional
+                        //     useStickyGroupSeparators: true, // optional
+                        //     floatingHeader: true, // optional
+                        //     order: GroupedListOrder.ASC); // optional),
                       }),
                 ],
               );
             },
           ),
         ),
-        InputMsg()
+        InputMsg(iconColor: Color.fromRGBO(0, 140, 180, 1))
       ]),
     );
   }

@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 class UserResponse extends StatelessWidget {
   final String text;
   final String timeSent;
+  final Color widgetColor;
 
   const UserResponse({
     this.text = 'default text',
     this.timeSent = '00:00 AM',
+    this.widgetColor = Colors.blue,
     Key? key,
   }) : super(key: key);
 
@@ -25,8 +27,8 @@ class UserResponse extends StatelessWidget {
               constraints: const BoxConstraints(
                 maxWidth: 200,
               ),
-              decoration: const BoxDecoration(
-                color: Color.fromRGBO(0, 140, 180, 1),
+              decoration: BoxDecoration(
+                color: widgetColor,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(4),
                   topRight: Radius.circular(4),
