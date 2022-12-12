@@ -1,13 +1,18 @@
 import 'package:chatbot_template/constants/constants.dart';
 import 'package:chatbot_template/controller/login_controller.dart';
+import 'package:chatbot_template/dashboard/route/routes.dart';
 import 'package:chatbot_template/view/bottom_bar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import '../dashboard/logic/controllers/dashboard_controller.dart';
+import '../dashboard/view/screen/dashborad_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   final _formKey = GlobalKey<FormState>();
   final _userController = TextEditingController();
   final _passwordController = TextEditingController();
+
   LoginScreen({super.key});
 
   @override
@@ -226,7 +231,10 @@ class LoginScreen extends StatelessWidget {
                                   style: TextStyle(color: kGreyColor),
                                 ),
                                 TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    // Get.to(DashboardScreen());
+                                    Get.toNamed(Routes.dashboardScreen);
+                                  },
                                   child: const Text(
                                     'Sing Up',
                                     style: TextStyle(

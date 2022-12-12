@@ -1,0 +1,13 @@
+# This is a generated file; do not edit or check into version control.
+cloud_firestore=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/cloud_firestore-4.2.0/
+cloud_firestore_web=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/cloud_firestore_web-3.1.1/
+firebase_auth=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/firebase_auth-4.2.0/
+firebase_auth_web=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/firebase_auth_web-5.2.0/
+firebase_core=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/firebase_core-2.4.0/
+firebase_core_web=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/firebase_core_web-2.0.2/
+path_provider=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/path_provider-2.0.11/
+path_provider_android=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/path_provider_android-2.0.22/
+path_provider_ios=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/path_provider_ios-2.0.11/
+path_provider_linux=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/path_provider_linux-2.1.7/
+path_provider_macos=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/path_provider_macos-2.0.6/
+path_provider_windows=/Users/haneenalrewaished/.pub-cache/hosted/pub.dev/path_provider_windows-2.1.3/
