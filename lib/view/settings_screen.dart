@@ -1,4 +1,5 @@
 import 'package:chatbot_template/constants/constants.dart';
+import 'package:chatbot_template/controller/chat_controller.dart';
 import 'package:chatbot_template/controller/login_controller.dart';
 import 'package:chatbot_template/view/chat_screen.dart';
 import 'package:chatbot_template/view/login_screen.dart';
@@ -7,8 +8,8 @@ import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 
 class SettingsScreen extends StatelessWidget {
-  const SettingsScreen({super.key});
-
+   SettingsScreen({super.key});
+final chatController = Get.put(ChatContoller());
   @override
   Widget build(BuildContext context) {
     return GetBuilder<LoginController>(
@@ -63,6 +64,7 @@ class SettingsScreen extends StatelessWidget {
                         const EdgeInsets.only(left: 15, right: 15, bottom: 15),
                     child: GestureDetector(
                       onTap: () {
+                        chatController.getChatID(chatController.currentUserID);
                         Get.to(() =>  ChatScreen());
                       },
                       child: ListTile(

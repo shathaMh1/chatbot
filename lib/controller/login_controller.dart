@@ -14,17 +14,17 @@ class LoginController extends GetxController {
 
   void signIn(String email, String password) async {
     try {
-      await _firebaseAuth.signInWithEmailAndPassword(
+      var user = await _firebaseAuth.signInWithEmailAndPassword(
           email: email, password: password);
+
+      print(user.user?.uid);
       Get.snackbar('success', 'success',
-          snackPosition: SnackPosition.BOTTOM,
+          snackPosition: SnackPosition.TOP,
           backgroundColor: kBlackColor,
           colorText: kBackgroundColor);
 
       loggedIn = true;
       update();
-
-
     } on FirebaseAuthException catch (e) {
       String title = e.code.replaceAll(RegExp('-'), ' ').capitalize!;
 

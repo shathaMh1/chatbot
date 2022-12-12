@@ -168,26 +168,33 @@ class LoginScreen extends StatelessWidget {
                             const SizedBox(height: 10),
                             Row(
                               children: [
-                                Checkbox(
-                                  value: true,
-                                  onChanged: (value) {},
-                                  activeColor: kGreyColor,
-                                ),
-                                const SizedBox(width: 5),
-                                const Text(
-                                  'Remember me',
-                                  style: TextStyle(
-                                    color: kGreyColor,
-                                    fontSize: 12,
+                                Expanded(
+                                  flex: 1,
+                                  child: Checkbox(
+                                    value: true,
+                                    onChanged: (value) {},
+                                    activeColor: kGreyColor,
                                   ),
                                 ),
-                                const SizedBox(width: 15),
-                                const Text(
-                                  'Don\'t remember the password ?',
-                                  style: TextStyle(
-                                    decoration: TextDecoration.underline,
-                                    color: kGreyColor,
-                                    fontSize: 10,
+                                Expanded(
+                                  flex: 3,
+                                  child: const Text(
+                                    'Remember me',
+                                    style: TextStyle(
+                                      color: kGreyColor,
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  flex: 5,
+                                  child: const Text(
+                                    'Don\'t remember the password ?',
+                                    style: TextStyle(
+                                      decoration: TextDecoration.underline,
+                                      color: kGreyColor,
+                                      fontSize: 10,
+                                    ),
                                   ),
                                 ),
                               ],
@@ -207,7 +214,7 @@ class LoginScreen extends StatelessWidget {
                                         _passwordController.text.trim(),
                                       );
                                       if (controller.loggedIn == true) {
-                                        Get.to(const BottomBarScreen());
+                                        Get.to(BottomBarScreen());
                                       }
                                     } else {
                                       return null;

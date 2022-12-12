@@ -48,13 +48,10 @@ class InputMsg extends StatelessWidget {
                     height: 18,
                     fit: BoxFit.scaleDown,
                   ),
-                  onPressed: () {
+                  onPressed: () async {
                     messageEditingController.clear();
-                    chatController.firestore.collection('messages').add({
-                      'text': chatController.message,
-                      'sender': chatController.auth.currentUser!.email,
-                      'time': FieldValue.serverTimestamp(),
-                    });
+                    chatController.getUserMessages();
+                  
                     print('sending msg to Firestore Database ..');
                   },
                 ))),

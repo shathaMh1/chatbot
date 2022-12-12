@@ -13,6 +13,7 @@ import 'package:intl/intl.dart';
 
 class ChatScreen extends StatelessWidget {
   final chatController = Get.put(ChatContoller());
+  var userUid = FirebaseAuth.instance.currentUser!.uid;
   ChatScreen({super.key});
 
   @override
@@ -52,60 +53,76 @@ class ChatScreen extends StatelessWidget {
                       text: DateFormat.yMMMd().format(DateTime.now()),
                     ),
                   ),
-                  StreamBuilder<QuerySnapshot>(
-                      stream: chatController.firestore
-                          .collection('messages')
-                          .orderBy('time')
-                          .snapshots(),
-                      builder: (context, snapshot) {
-                        List<Widget> chatMessages = [];
-                        if (!snapshot.hasData) {
-                          // display a spinner
-                        } else {
-                          final messages = snapshot.data!.docs;
-                          for (var msg in messages) {
-                            if (FirebaseAuth.instance.currentUser!.email ==
-                                    msg.get('sender') ||
-                                (msg.get('sender') == 'Admin@gmail.com')) {
-                              final msgText = msg.get('text');
-                              final msgSender =
-                                  msg.get('sender'); // email of sender
-                              final msgTime = msg.get('time');
-                              final msgWidget = chatController
-                                      .isCurrentUser(msgSender)
-                                  ? UserResponse(
-                                      text: msgText,
-                                      timeSent: chatController
-                                          .timestampToDesiredFormat(msgTime),
-                                      widgetColor:
-                                          const Color.fromRGBO(0, 140, 180, 1),
-                                    )
-                                  : AdminResponse(
-                                      text: msgText,
-                                      timeSent: chatController
-                                          .timestampToDesiredFormat(msgTime),
-                                    );
-                              chatMessages.add(msgWidget);
+                  Obx(() {
+                    return StreamBuilder<QuerySnapshot>(
+                        stream: chatController.chatID.value.isEmpty
+                            ? chatController.firestore
+                                .collection('chatbot3')
+                                .doc()
+                                .collection('messages')
+                                .orderBy('time')
+                                .snapshots()
+                            : chatController.firestore
+                                .collection('chatbot3')
+                                .doc(chatController.chatID.value)
+                                .collection('messages')
+                                .orderBy('time')
+                                .snapshots(),
+                        builder: (context, snapshot) {
+                          List<Widget> chatMessages = [];
+                          if (!snapshot.hasData) {
+                            // display a spinner
+                          } else {
+                            final messages = snapshot.data!.docs;
+                            for (var msg in messages) {
+                              if (FirebaseAuth.instance.currentUser!.uid ==
+                                  msg.get('sender')) {
+                                final msgText = msg.get('text');
+                                final msgSender = msg.get('sender');
+                                final msgReceiver = msg.get('receiver');
+                                final msgTime = msg.get('time');
+                                final msgWidget = UserResponse(
+                                  text: msgText,
+                                  timeSent: chatController
+                                      .timestampToDesiredFormat(msgTime),
+                                  widgetColor:
+                                      const Color.fromRGBO(0, 140, 180, 1),
+                                );
+                                chatMessages.add(msgWidget);
+                              } else if (msg.get('sender') ==
+                                  chatController.adminUid) {
+                                // if the sender is the admin -> then display admin widget,
+                                final msgText = msg.get('text');
+                                final msgSender = msg.get('sender');
+                                final msgReceiver = msg.get('receiver');
+                                final msgTime = msg.get('time');
+                                final msgWidget = AdminResponse(
+                                  text: msgText,
+                                  timeSent: chatController
+                                      .timestampToDesiredFormat(msgTime),
+                                );
+                                chatMessages.add(msgWidget);
+                              }
                             }
                           }
-                        }
-                        return Column(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: chatMessages);
+                          return Column(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: chatMessages);
 
-                        // return GroupedListView<dynamic, String>(
-                        //     elements: chat_messages,
-                        //     groupBy: (element) => element['group'],
-                        //     groupSeparatorBuilder: (String groupByValue) =>
-                        //         Text(groupByValue),
-                        //     itemBuilder: (context, dynamic element) =>
-                        //         Text(element['name']),
-                        //     itemComparator: (item1, item2) => item1['name']
-                        //         .compareTo(item2['name']), // optional
-                        //     useStickyGroupSeparators: true, // optional
-                        //     floatingHeader: true, // optional
-                        //     order: GroupedListOrder.ASC); // optional),
-                      }),
+                          // return GroupedListView<dynamic, String>(
+                          //     elements: chat_messages,
+                          //     groupBy: (element) => element['group'],
+                          //     groupSeparatorBuilder: (String groupByValue) =>
+                          //         Text(groupByValue),
+                          //     itemBuilder: (context, dynamic element) =>
+                          //         Text(element['name']),
+                          //     itemComparator: (item1, item2) => item1['name']
+                          //         .compareTo(item2['name']), // optional
+                          //     useStickyGroupSeparators: true, // optional
+                          //     floatingHeader: true, // optional
+                          //     order: GroupedListOrder.ASC); // optional),
+                        });
+                  })
                 ],
               );
             },
