@@ -64,7 +64,7 @@ final chatController = Get.put(ChatContoller());
                         const EdgeInsets.only(left: 15, right: 15, bottom: 15),
                     child: GestureDetector(
                       onTap: () {
-                        chatController.getChatID(chatController.currentUserID);
+                        // chatController.getChatID(chatController.currentUserID);
                         Get.to(() =>  ChatScreen());
                       },
                       child: ListTile(

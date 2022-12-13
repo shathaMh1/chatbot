@@ -1,12 +1,11 @@
 import 'package:chatbot_template/constants/constants.dart';
-import 'package:chatbot_template/controller/chat_controller.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:chatbot_template/controller/new_chat_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class InputMsg extends StatelessWidget {
-  final chatController = Get.put(ChatContoller());
+  final chatController = Get.put(NewChatContoller());
   final messageEditingController = TextEditingController();
   final Color iconColor;
 
@@ -48,10 +47,9 @@ class InputMsg extends StatelessWidget {
                     height: 18,
                     fit: BoxFit.scaleDown,
                   ),
-                  onPressed: () async {
+                  onPressed: () {
+                    chatController.storeMessage(messageEditingController.text);
                     messageEditingController.clear();
-                    chatController.getUserMessages();
-                  
                     print('sending msg to Firestore Database ..');
                   },
                 ))),

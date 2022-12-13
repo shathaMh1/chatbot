@@ -111,13 +111,13 @@ class ChatContoller extends GetxController {
     // }
   }
 
-  void getChatID(String currentUserID) async {
-    final snapshot = await firestore.collection('chatbot3').get().then((s) {
-      if (s.docs.first['userID'] == currentUserID) {
-        chatID.value = s.docs.first['id'];
-      }
-    });
-  }
+  // void getChatID(String currentUserID) async {
+  //   final snapshot = await firestore.collection('chatbot3').get().then((s) {
+  //     if (s.docs.first['userID'] == currentUserID) {
+  //       chatID.value = s.docs.first['id'];
+  //     }
+  //   });
+  // }
 
   //check if it's the current user returns true
   bool isCurrentUser(msgSender) {
@@ -127,7 +127,6 @@ class ChatContoller extends GetxController {
     return false;
   }
   // Time converter
-
   String timestampToDesiredFormat(msgTime) {
     if (msgTime == null) {
       String formattedTime = DateFormat.jm().format(DateTime.now());
