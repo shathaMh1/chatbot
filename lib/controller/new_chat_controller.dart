@@ -45,7 +45,7 @@ class NewChatContoller extends GetxController {
     }).then((value) {
       firestore.collection('users').doc(adminUid).set({
         "last_messages_time": FieldValue.serverTimestamp(),
-        "user_email": currentUserEmail,
+        "user_email": "admin@gmail.com",
         "status": "onHold",
       });
     });
