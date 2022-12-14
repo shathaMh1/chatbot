@@ -38,6 +38,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   firebase_core: ^2.3.0
   get: ^4.6.5
+  get_storage: ^2.0.3
   flutter_switch: ^0.3.2
   cloud_firestore: ^4.1.0
   firebase_auth: ^4.1.4
@@ -46,6 +47,7 @@ dependencies:
   google_fonts: ^2.1.0
   intl: ^0.17.0
   badges: ^2.0.3
+ 
   
 
 dev_dependencies:

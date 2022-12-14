@@ -22,13 +22,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: AppRoutes.dashboard,
+      initialRoute: AppRoutes.login,
       getPages: AppRoutes.routes,
-      // home: LoginScreen(),
-      // home: DashboardScreen(),
     );
   }
 }

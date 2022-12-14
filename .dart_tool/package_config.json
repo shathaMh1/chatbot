@@ -176,6 +176,12 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "get_storage",
+      "rootUri": "file:///Users/haneenalrewaished/.pub-cache/hosted/pub.dev/get_storage-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "google_fonts",
       "rootUri": "file:///Users/haneenalrewaished/.pub-cache/hosted/pub.dev/google_fonts-2.3.3",
       "packageUri": "lib/",
@@ -404,7 +410,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-12T14:07:00.496322Z",
+  "generated": "2022-12-13T13:24:26.774492Z",
   "generator": "pub",
   "generatorVersion": "2.19.0-467.0.dev"
 }

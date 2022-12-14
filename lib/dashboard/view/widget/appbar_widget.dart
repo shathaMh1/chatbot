@@ -1,4 +1,5 @@
 import 'package:chatbot_template/dashboard/view/widget/text_utils.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
@@ -7,6 +8,7 @@ import '../../logic/controllers/dashboard_controller.dart';
 
 class AppBarWidget extends StatelessWidget {
   AppBarWidget({Key? key}) : super(key: key);
+
   final controller = Get.find<DashboardController>();
 
   @override
