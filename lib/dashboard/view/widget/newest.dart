@@ -3,7 +3,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../logic/controllers/dashboard_controller.dart';
-import 'package:badges/badges.dart';
 
 class NewestChat extends StatelessWidget {
   NewestChat({Key? key}) : super(key: key);
