@@ -13,24 +13,27 @@ class NewChatContoller extends GetxController {
 
   // Store msgs to Firestore
   void storeMessage(String msg) async {
-    await firestore
-        .collection('users')
-        .doc(currentUserID)
-        .collection('messages')
-        .doc(adminUid)
-        .collection('chats')
-        .add({
-      "senderID": currentUserID,
-      "receiverID": adminUid,
-      "message": msg,
-      "time": FieldValue.serverTimestamp(),
-    }).then((value) {
-      firestore.collection('users').doc(currentUserID).set({
-        "last_messages_time": FieldValue.serverTimestamp(),
-        "user_email": currentUserEmail, 
-        "status": "onHold",
+    // the following if statement fixes the duplication issue in the admin chat.
+    if (currentUserID != adminUid) { 
+      await firestore
+          .collection('users')
+          .doc(currentUserID)
+          .collection('messages')
+          .doc(adminUid)
+          .collection('chats')
+          .add({
+        "senderID": currentUserID,
+        "receiverID": adminUid,
+        "message": msg,
+        "time": FieldValue.serverTimestamp(),
+      }).then((value) {
+        firestore.collection('users').doc(currentUserID).set({
+          "last_messages_time": FieldValue.serverTimestamp(),
+          "user_email": currentUserEmail,
+          "status": "onHold",
+        });
       });
-    });
+    }
     await firestore
         .collection('users')
         .doc(adminUid)
@@ -82,5 +85,4 @@ class NewChatContoller extends GetxController {
       return formattedTime;
     }
   }
-  
 }

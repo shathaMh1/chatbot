@@ -47,7 +47,7 @@ class ChatScreen extends StatelessWidget {
                     if (snapshot.data!.docs.length < 1) {
                       return Container();
                     }
-                    
+
                     return ListView.builder(
                       reverse: true,
                       physics: BouncingScrollPhysics(),
