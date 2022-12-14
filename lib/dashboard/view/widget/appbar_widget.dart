@@ -10,55 +10,68 @@ class AppBarWidget extends StatelessWidget {
   AppBarWidget({Key? key}) : super(key: key);
 
   final controller = Get.find<DashboardController>();
+  final db = FirebaseFirestore.instance;
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.only(left: 33, top: 87),
-        child: Row(
-          children: [
-            SizedBox(
-              height: 138,
-              width: 630,
-              child: Card(
-                child: IntrinsicHeight(
-                  // ignore: unnecessary_new
-                  child: new Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      CasesItems(total: "0", title: controller.casesItem[0]),
-                      const VerticalDivider(
-                        color: Colors.black,
-                        endIndent: 10,
-                        indent: 10,
+    return StreamBuilder<QuerySnapshot>(
+        stream: db.collection('users').snapshots(),
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) {
+            return CircularProgressIndicator();
+          }
+          return Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 33, top: 87),
+              child: Row(
+                children: [
+                  SizedBox(
+                    height: 138,
+                    width: 630,
+                    child: Card(
+                      child: IntrinsicHeight(
+                        // ignore: unnecessary_new
+                        child: new Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            CasesItems(
+                                total: 0, title: controller.casesItem[0]),
+                            const VerticalDivider(
+                              color: Colors.black,
+                              endIndent: 10,
+                              indent: 10,
+                            ),
+                            CasesItems(
+                                total: 0, title: controller.casesItem[1]),
+                            const VerticalDivider(
+                              color: Colors.black,
+                              endIndent: 10,
+                              indent: 10,
+                            ),
+                            CasesItems(
+                                total: 0, title: controller.casesItem[2]),
+                            const VerticalDivider(
+                              color: Colors.black,
+                              endIndent: 10,
+                              indent: 10,
+                            ),
+                            CasesItems(
+                                total: snapshot.data!.docs.length,
+                                title: controller.casesItem[3]),
+                          ],
+                        ),
                       ),
-                      CasesItems(total: "0", title: controller.casesItem[1]),
-                      const VerticalDivider(
-                        color: Colors.black,
-                        endIndent: 10,
-                        indent: 10,
-                      ),
-                      CasesItems(total: "0", title: controller.casesItem[2]),
-                      const VerticalDivider(
-                        color: Colors.black,
-                        endIndent: 10,
-                        indent: 10,
-                      ),
-                      CasesItems(total: "0", title: controller.casesItem[3]),
-                    ],
+                    ),
                   ),
-                ),
+                ],
               ),
             ),
-          ],
-        ),
-      ),
-    );
+          );
+        });
   }
 
   Column CasesItems({
-    required String total,
+    required int total,
     required String title,
   }) {
     return Column(
@@ -69,7 +82,7 @@ class AppBarWidget extends StatelessWidget {
           color: Colors.black,
           fontSize: 28,
           fontWeight: FontWeight.bold,
-          text: total,
+          text: total.toString(),
         ),
         TextUtils(
           color: controller.getColor(title),

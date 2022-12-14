@@ -63,7 +63,7 @@ class SettingsScreen extends StatelessWidget {
                         const EdgeInsets.only(left: 15, right: 15, bottom: 15),
                     child: GestureDetector(
                       onTap: () {
-                        Get.to(() => const ChatScreen());
+                        Get.to(() => ChatScreen());
                       },
                       child: ListTile(
                         leading: Image.asset('assets/images/contact.png'),

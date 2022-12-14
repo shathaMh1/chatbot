@@ -188,6 +188,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "grouped_list",
+      "rootUri": "file:///Users/haneenalrewaished/.pub-cache/hosted/pub.dev/grouped_list-5.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///Users/haneenalrewaished/.pub-cache/hosted/pub.dev/http-0.13.5",
       "packageUri": "lib/",
@@ -410,7 +416,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-14T11:04:13.462291Z",
+  "generated": "2022-12-14T11:18:04.569202Z",
   "generator": "pub",
   "generatorVersion": "2.19.0-467.0.dev"
 }

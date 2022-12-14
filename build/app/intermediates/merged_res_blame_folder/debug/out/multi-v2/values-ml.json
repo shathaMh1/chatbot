@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/hawraalomani/FlutterProjects/ChatBot_Template/chatbot_template/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml",
+            "outputFile": "/Users/hawraalomani/FlutterProjects/chatbot/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ml/values-ml.xml",
             "map": [
                 {
                     "source": "/Users/hawraalomani/.gradle/caches/transforms-3/297942c3957902ff7659eb1bc47c3617/transformed/browser-1.4.0/res/values-ml/values-ml.xml",

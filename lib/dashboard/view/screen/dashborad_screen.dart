@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../../view/chat_screen.dart';
 import '../../logic/controllers/dashboard_controller.dart';
 import '../widget/appbar_widget.dart';
 import '../widget/chat-list.dart';
@@ -31,6 +32,7 @@ class DashboardScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               ChatList(),
+              ChatScreen(),
               UserProfile(),
             ],
           ),
