@@ -82,4 +82,5 @@ class NewChatContoller extends GetxController {
       return formattedTime;
     }
   }
+  
 }
