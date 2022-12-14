@@ -1,17 +1,9 @@
-import 'package:chatbot_template/constants/constants.dart';
-import 'package:chatbot_template/view/widgets/chat%20widgets/admin_response.dart';
-import 'package:chatbot_template/view/widgets/chat%20widgets/input_send_msg.dart';
-import 'package:chatbot_template/view/widgets/chat%20widgets/mark_close_button.dart';
-import 'package:chatbot_template/view/widgets/chat%20widgets/timestamp_chat.dart';
-import 'package:chatbot_template/view/widgets/chat%20widgets/user_response.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:intl/intl.dart';
-import 'package:grouped_list/grouped_list.dart';
 
 class AdminChatWidget extends StatelessWidget {
-  AdminChatWidget({super.key});
+  final String docID;
+  AdminChatWidget({super.key, required this.docID});
   @override
   Widget build(BuildContext context) {
     return Column(children: [
@@ -21,7 +13,7 @@ class AdminChatWidget extends StatelessWidget {
                   .collection('users')
                   .doc("vJI1WLlXPucQmbvcpl5zfsAa5W33")
                   .collection('messages')
-                  .doc("vJI1WLlXPucQmbvcpl5zfsAa5W33")
+                  .doc(docID)
                   .collection('chats')
                   .orderBy('time', descending: true)
                   .snapshots(),
@@ -39,15 +31,13 @@ class AdminChatWidget extends StatelessWidget {
                     physics: BouncingScrollPhysics(),
                     itemCount: snapshot.data!.docs.length,
                     itemBuilder: (context, index) {
-                      return Text("h");
+                      return Text(
+                          snapshot.data!.docs[index]['message'].toString());
                     },
                   );
                 }
                 return Container();
               })),
-      InputMsg(
-        iconColor: Color.fromRGBO(177, 193, 207, 1),
-      )
     ]);
   }
 }

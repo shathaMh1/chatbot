@@ -30,7 +30,8 @@ class NewestChat extends StatelessWidget {
                           children: [
                             InkWell(
                               onTap: () {
-                                Get.to(() => AdminChatWidget());
+                                // print(snapshot.data!.docs[index].id);
+                                Get.to(() => AdminChatWidget(docID: snapshot.data!.docs[index].id));
                               },
                               child: Card(
                                   color: Colors.white,
