@@ -1,3 +1,4 @@
+import 'package:chatbot_template/view/widgets/chat%20widgets/admin_chat_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../../view/chat_screen.dart';
@@ -32,7 +33,6 @@ class DashboardScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               ChatList(),
-              ChatScreen(),
               UserProfile(),
             ],
           ),

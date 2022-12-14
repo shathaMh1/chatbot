@@ -5,6 +5,7 @@ class UserProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print("UserProfile");
     return Padding(
       padding: const EdgeInsets.only(right: 30, bottom: 15),
       child: SizedBox(

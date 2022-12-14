@@ -1,5 +1,4 @@
 import 'package:chatbot_template/constants/constants.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 
@@ -22,9 +21,8 @@ class LoginController extends GetxController {
           colorText: kBackgroundColor);
 
       loggedIn = true;
+
       update();
-
-
     } on FirebaseAuthException catch (e) {
       String title = e.code.replaceAll(RegExp('-'), ' ').capitalize!;
 

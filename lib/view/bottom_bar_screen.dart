@@ -7,12 +7,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class BottomBarScreen extends StatelessWidget {
-  const BottomBarScreen({super.key});
+  BottomBarScreen({super.key});
 
-  final List<Map<String, dynamic>> _pages = const [
-    {'title': 'Home', 'screen': HomeScreen()},
-    {'title': 'Profile', 'screen': ProfileScreen()},
-    {'title': 'Trending', 'screen': TrendingScreen()},
+  final List<Map<String, dynamic>> _pages = [
+    {'title': 'Home', 'screen': const HomeScreen()},
+    {'title': 'Profile', 'screen': const ProfileScreen()},
+    {'title': 'Trending', 'screen': const TrendingScreen()},
     {'title': 'Settings', 'screen': SettingsScreen()},
   ];
 

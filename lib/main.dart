@@ -4,12 +4,15 @@ import 'package:chatbot_template/bindings/initial_binding.dart';
 import 'package:chatbot_template/view/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'dashboard/route/routes.dart';
 import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -30,8 +33,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: AppRoutes.login,
       getPages: AppRoutes.routes,
-      initialBinding: InitialBinding(),
-      home: LoginScreen(),
+      // initialBinding: InitialBinding(),
     );
   }
 }

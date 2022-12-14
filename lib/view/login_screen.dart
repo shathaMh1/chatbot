@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.asset('images/google.png'),
+                              Image.asset('assets/images/google.png'),
                               const SizedBox(width: 8),
                               const Text(
                                 'with Google',
@@ -68,7 +68,7 @@ class LoginScreen extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Image.asset('images/google.png'),
+                              Image.asset('assets/images/google.png'),
                               const SizedBox(width: 8),
                               const Text(
                                 'with Apple',
@@ -113,7 +113,8 @@ class LoginScreen extends StatelessWidget {
                               },
                               decoration: InputDecoration(
                                 hintText: 'Enter your name',
-                                prefixIcon: Image.asset('images/user.png'),
+                                prefixIcon:
+                                    Image.asset('assets/images/user.png'),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
                                   borderSide: const BorderSide(
@@ -147,7 +148,8 @@ class LoginScreen extends StatelessWidget {
                               obscureText: true,
                               decoration: InputDecoration(
                                 hintText: 'Enter your password',
-                                prefixIcon: Image.asset('images/lock.png'),
+                                prefixIcon:
+                                    Image.asset('assets/images/lock.png'),
                                 suffixIcon: const Icon(
                                   Icons.visibility_off,
                                   color: kGreyColor,
@@ -216,7 +218,7 @@ class LoginScreen extends StatelessWidget {
                                           _passwordController.text.trim(),
                                         );
                                         if (controller.loggedIn == true) {
-                                          Get.to(const BottomBarScreen());
+                                          Get.to(BottomBarScreen());
                                         }
                                       } else {
                                         return null;
