@@ -41,7 +41,7 @@ class InputMsg extends StatelessWidget {
                 border: InputBorder.none,
                 suffixIcon: IconButton(
                   icon: SvgPicture.asset(
-                    'assets/images/SendMsg.svg',
+                    'images/SendMsg.svg',
                     color: iconColor,
                     width: 18,
                     height: 18,

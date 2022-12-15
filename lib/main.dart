@@ -1,5 +1,4 @@
 import 'package:chatbot_template/dashboard/view/screen/dashborad_screen.dart';
-
 import 'package:chatbot_template/bindings/initial_binding.dart';
 import 'package:chatbot_template/view/login_screen.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +20,6 @@ void main() async {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,6 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: AppRoutes.login,
       getPages: AppRoutes.routes,
-      // initialBinding: InitialBinding(),
     );
   }
 }
