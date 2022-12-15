@@ -1,10 +1,13 @@
-2022/12/14-14:32:42.240 9703 Creating DB /private/var/folders/g7/2br50h_16lvbq92h3xt9qqbr0000gn/T/flutter_tools.i2WS91/flutter_tools_chrome_device.ysLM0o/Default/IndexedDB/http_localhost_61376.indexeddb.leveldb since it was missing.
-2022/12/14-14:32:42.308 9703 Reusing MANIFEST /private/var/folders/g7/2br50h_16lvbq92h3xt9qqbr0000gn/T/flutter_tools.i2WS91/flutter_tools_chrome_device.ysLM0o/Default/IndexedDB/http_localhost_61376.indexeddb.leveldb/MANIFEST-000001
-2022/12/14-14:32:42.453 f303 Level-0 table #5: started
-2022/12/14-14:32:42.474 f303 Level-0 table #5: 1232 bytes OK
-2022/12/14-14:32:42.532 f303 Delete type=0 #3
-2022/12/14-14:32:42.552 f303 Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)
-2022/12/14-14:34:00.000 f807 Level-0 table #7: started
-2022/12/14-14:34:00.047 f807 Level-0 table #7: 1879 bytes OK
-2022/12/14-14:34:00.107 f807 Delete type=0 #4
-2022/12/14-14:34:00.108 f807 Manual compaction at level-0 from '\x00\x04\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x05\x00\x00\x00' @ 0 : 0; will stop at (end)
+2022/12/15-16:38:10.853 bc03 Reusing MANIFEST /private/var/folders/l3/jfj465s968g185xs65mh0jlr0000gn/T/flutter_tools.xMpYeH/flutter_tools_chrome_device.QQfQRb/Default/IndexedDB/http_localhost_61376.indexeddb.leveldb/MANIFEST-000001
+2022/12/15-16:38:10.854 bc03 Recovering log #6
+2022/12/15-16:38:10.854 bc03 Reusing old log /private/var/folders/l3/jfj465s968g185xs65mh0jlr0000gn/T/flutter_tools.xMpYeH/flutter_tools_chrome_device.QQfQRb/Default/IndexedDB/http_localhost_61376.indexeddb.leveldb/000006.log 
+2022/12/15-16:38:10.889 bc03 Level-0 table #10: started
+2022/12/15-16:38:10.895 bc03 Level-0 table #10: 870 bytes OK
+2022/12/15-16:38:10.921 bc03 Delete type=0 #6
+2022/12/15-16:38:10.922 bc03 Manual compaction at level-0 from '\x00\x05\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at '\x00\x05\x00\x00\x05' @ 165 : 1
+2022/12/15-16:38:10.922 bc03 Compacting 1@0 + 1@1 files
+2022/12/15-16:38:10.931 bc03 Generated table #11@0: 53 keys, 1491 bytes
+2022/12/15-16:38:10.931 bc03 Compacted 1@0 + 1@1 files => 1491 bytes
+2022/12/15-16:38:10.942 bc03 compacted to: files[ 0 1 1 0 0 0 0 ]
+2022/12/15-16:38:10.942 bc03 Delete type=2 #10
+2022/12/15-16:38:10.942 bc03 Manual compaction at level-0 from '\x00\x05\x00\x00\x05' @ 165 : 1 .. '\x00\x06\x00\x00\x00' @ 0 : 0; will stop at (end)

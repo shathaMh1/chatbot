@@ -18,6 +18,7 @@ class DashboardScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
+          Center(child: CircularProgressIndicator()),
           Center(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,

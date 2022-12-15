@@ -113,8 +113,7 @@ class LoginScreen extends StatelessWidget {
                               },
                               decoration: InputDecoration(
                                 hintText: 'Enter your name',
-                                prefixIcon:
-                                    Image.asset('images/user.png'),
+                                prefixIcon: Image.asset('images/user.png'),
                                 border: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(10),
                                   borderSide: const BorderSide(
@@ -148,8 +147,7 @@ class LoginScreen extends StatelessWidget {
                               obscureText: true,
                               decoration: InputDecoration(
                                 hintText: 'Enter your password',
-                                prefixIcon:
-                                    Image.asset('images/lock.png'),
+                                prefixIcon: Image.asset('images/lock.png'),
                                 suffixIcon: const Icon(
                                   Icons.visibility_off,
                                   color: kGreyColor,
@@ -206,15 +204,14 @@ class LoginScreen extends StatelessWidget {
                                   style: ElevatedButton.styleFrom(
                                       backgroundColor: kGreyColor2),
                                   onPressed: () {
-                                 
-                                      if (_formKey.currentState!.validate()) {
-                                        controller.signIn(
-                                          _userController.text.trim(),
-                                          _passwordController.text.trim(),
-                                        );
-                                      } else {
-                                        return null;
-                                      }
+                                    if (_formKey.currentState!.validate()) {
+                                      controller.signIn(
+                                        _userController.text.trim(),
+                                        _passwordController.text.trim(),
+                                      );
+                                    } else {
+                                      return null;
+                                    }
                                   },
                                   child: const Text('Login'),
                                 ),

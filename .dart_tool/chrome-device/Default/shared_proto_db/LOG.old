@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2022/12/15-16:23:38.834 ec03 Reusing MANIFEST /private/var/folders/_6/n24sv8n16f59tb7btlcxxvgc0000gn/T/flutter_tools.E3GErj/flutter_tools_chrome_device.GRt9zx/Default/shared_proto_db/MANIFEST-000001
 2022/12/15-16:23:38.835 ec03 Recovering log #22
 2022/12/15-16:23:38.836 ec03 Reusing old log /private/var/folders/_6/n24sv8n16f59tb7btlcxxvgc0000gn/T/flutter_tools.E3GErj/flutter_tools_chrome_device.GRt9zx/Default/shared_proto_db/000022.log 
@@ -14,3 +15,20 @@
 2022/12/15-16:23:38.836 ec03 Delete type=2 #23
 2022/12/15-16:23:38.836 ec03 Delete type=0 #19
 2022/12/15-16:23:38.836 ec03 Delete type=0 #9
+=======
+2022/12/15-16:38:06.082 13703 Reusing MANIFEST /private/var/folders/l3/jfj465s968g185xs65mh0jlr0000gn/T/flutter_tools.xMpYeH/flutter_tools_chrome_device.QQfQRb/Default/shared_proto_db/MANIFEST-000001
+2022/12/15-16:38:06.083 13703 Recovering log #15
+2022/12/15-16:38:06.087 13703 Reusing old log /private/var/folders/l3/jfj465s968g185xs65mh0jlr0000gn/T/flutter_tools.xMpYeH/flutter_tools_chrome_device.QQfQRb/Default/shared_proto_db/000015.log 
+2022/12/15-16:38:06.088 13703 Delete type=0 #7
+2022/12/15-16:38:06.088 13703 Delete type=0 #12
+2022/12/15-16:38:06.088 13703 Delete type=0 #4
+2022/12/15-16:38:06.088 13703 Delete type=0 #3
+2022/12/15-16:38:06.088 13703 Delete type=2 #17
+2022/12/15-16:38:06.088 13703 Delete type=2 #3
+2022/12/15-16:38:06.088 13703 Delete type=2 #7
+2022/12/15-16:38:06.088 13703 Delete type=2 #13
+2022/12/15-16:38:06.088 13703 Delete type=2 #10
+2022/12/15-16:38:06.089 13703 Delete type=2 #5
+2022/12/15-16:38:06.089 13703 Delete type=2 #8
+2022/12/15-16:38:06.089 13703 Delete type=0 #9
+>>>>>>> 5d91c71 (add the logic in appbar and fix the loding)

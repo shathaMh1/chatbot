@@ -46,4 +46,31 @@ class DashboardController extends GetxController {
       return formattedTime;
     }
   }
+
+  var isOpened = 0.obs;
+  var isClose = 0.obs;
+  var onHold = 0.obs;
+
+  void checkStatus(status) {
+    isOpened(0);
+    isClose(0);
+    onHold(0);
+    for (int i = 0; i < status.length; i++) {
+      if (status[i]['status'] == 'onHold') {
+        onHold += 1;
+
+        print('onHold' + onHold.toString());
+      }
+      if (status[i]['status'] == 'isOpened') {
+        isOpened += 1;
+
+        print('isOpened' + isOpened.toString());
+      }
+      if (status[i]['status'] == 'isClose') {
+        isClose += 1;
+
+        print('isClose' + isClose.toString());
+      }
+    }
+  }
 }
