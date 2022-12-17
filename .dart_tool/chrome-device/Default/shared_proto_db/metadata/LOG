@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-2022/12/15-16:54:19.071 e403 Reusing MANIFEST /private/var/folders/_6/n24sv8n16f59tb7btlcxxvgc0000gn/T/flutter_tools.MZ16AE/flutter_tools_chrome_device.RdgWm8/Default/shared_proto_db/metadata/MANIFEST-000001
-2022/12/15-16:54:19.072 e403 Recovering log #3
-2022/12/15-16:54:19.072 e403 Reusing old log /private/var/folders/_6/n24sv8n16f59tb7btlcxxvgc0000gn/T/flutter_tools.MZ16AE/flutter_tools_chrome_device.RdgWm8/Default/shared_proto_db/metadata/000003.log 
-=======
-2022/12/15-20:50:46.867 f203 Reusing MANIFEST /private/var/folders/l3/jfj465s968g185xs65mh0jlr0000gn/T/flutter_tools.5SIw9M/flutter_tools_chrome_device.lAPQ1C/Default/shared_proto_db/metadata/MANIFEST-000001
-2022/12/15-20:50:46.868 f203 Recovering log #3
-2022/12/15-20:50:46.868 f203 Reusing old log /private/var/folders/l3/jfj465s968g185xs65mh0jlr0000gn/T/flutter_tools.5SIw9M/flutter_tools_chrome_device.lAPQ1C/Default/shared_proto_db/metadata/000003.log 
->>>>>>> 5d91c71 (add the logic in appbar and fix the loding)

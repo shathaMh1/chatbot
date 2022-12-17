@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-2022/12/15-16:54:18.846 3003 Reusing MANIFEST /private/var/folders/_6/n24sv8n16f59tb7btlcxxvgc0000gn/T/flutter_tools.MZ16AE/flutter_tools_chrome_device.RdgWm8/Default/Session Storage/MANIFEST-000001
-2022/12/15-16:54:18.846 3003 Recovering log #3
-2022/12/15-16:54:18.847 3003 Reusing old log /private/var/folders/_6/n24sv8n16f59tb7btlcxxvgc0000gn/T/flutter_tools.MZ16AE/flutter_tools_chrome_device.RdgWm8/Default/Session Storage/000003.log 
-=======
-2022/12/15-20:50:46.579 2e03 Reusing MANIFEST /private/var/folders/l3/jfj465s968g185xs65mh0jlr0000gn/T/flutter_tools.5SIw9M/flutter_tools_chrome_device.lAPQ1C/Default/Session Storage/MANIFEST-000001
-2022/12/15-20:50:46.580 2e03 Recovering log #3
-2022/12/15-20:50:46.582 2e03 Reusing old log /private/var/folders/l3/jfj465s968g185xs65mh0jlr0000gn/T/flutter_tools.5SIw9M/flutter_tools_chrome_device.lAPQ1C/Default/Session Storage/000003.log 
->>>>>>> 5d91c71 (add the logic in appbar and fix the loding)

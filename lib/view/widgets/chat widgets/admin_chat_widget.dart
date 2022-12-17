@@ -1,12 +1,11 @@
 import 'package:chatbot_template/controller/new_chat_controller.dart';
+import 'package:chatbot_template/view/widgets/chat%20widgets/admin_response.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/input_send_msg.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/mark_close_button.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/user_response.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 class AdminChatWidget extends StatelessWidget {
   final String docID;
@@ -20,9 +19,9 @@ class AdminChatWidget extends StatelessWidget {
       child: Column(children: [
         Container(
           alignment: Alignment.centerRight,
-          color: Color.fromRGBO(54, 55, 64, 1),
+          color: const Color.fromRGBO(54, 55, 64, 1),
           height: 40,
-          child: MarkClosedButton(),
+          child: const MarkClosedButton(),
         ),
         Expanded(
             child: StreamBuilder<QuerySnapshot>(
@@ -43,20 +42,34 @@ class AdminChatWidget extends StatelessWidget {
                     }
                     return ListView.builder(
                       reverse: true,
-                      physics: BouncingScrollPhysics(),
+                      physics: const BouncingScrollPhysics(),
                       itemCount: snapshot.data!.docs.length,
                       itemBuilder: (context, index) {
-                        return UserResponse(
-                            text: snapshot.data!.docs[index]['message']
-                                .toString(),
-                            timeSent: chatController.timestampToDesiredFormat(
-                                snapshot.data!.docs[index]['time']));
+                        final msgWidget = chatController.isCurrentUser(
+                                snapshot.data!.docs[index]['senderID'])
+                            ? UserResponse(
+                                text: snapshot.data!.docs[index]['message'],
+                                timeSent:
+                                    chatController.timestampToDesiredFormat(
+                                        snapshot.data!.docs[index]['time']),
+                                widgetColor:
+                                    const Color.fromRGBO(54, 55, 64, 1),
+                              )
+                            : AdminResponse(
+                                text: snapshot.data!.docs[index]['message'],
+                                timeSent:
+                                    chatController.timestampToDesiredFormat(
+                                        snapshot.data!.docs[index]['time']),
+                              );
+                        chatMessages.add(msgWidget);
+                        return msgWidget;
+
+                        
                       },
                     );
                   }
                   return Container();
                 })),
-        //this causing the error when calling InputMsg()
         InputMsg()
       ]),
     );
