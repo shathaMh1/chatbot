@@ -1,17 +1,20 @@
 import 'package:chatbot_template/constants/constants.dart';
+import 'package:chatbot_template/controller/chat_controller_1.dart';
 import 'package:chatbot_template/controller/new_chat_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class InputMsg extends StatelessWidget {
-  final chatController = Get.put(NewChatContoller());
+  final chatController = Get.put(ChatContoller1());
   final messageEditingController = TextEditingController();
   final Color iconColor;
+  final String selectedUserID;
 
   InputMsg({
     this.iconColor = Colors.grey,
     Key? key,
+    required this.selectedUserID,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -48,7 +51,13 @@ class InputMsg extends StatelessWidget {
                     fit: BoxFit.scaleDown,
                   ),
                   onPressed: () {
-                    chatController.storeMessage(messageEditingController.text);
+                    if (chatController.currentUserID == selectedUserID) {
+                      chatController
+                          .storeMessageUser(messageEditingController.text);
+                    } else {
+                      chatController.storeMessageAdmin(
+                          selectedUserID, messageEditingController.text);
+                    }
                     messageEditingController.clear();
                     print('sending msg to Firestore Database ..');
                   },

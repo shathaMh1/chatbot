@@ -1,4 +1,5 @@
 import 'package:chatbot_template/constants/constants.dart';
+import 'package:chatbot_template/controller/chat_controller_1.dart';
 import 'package:chatbot_template/controller/new_chat_controller.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/admin_response.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/input_send_msg.dart';
@@ -10,9 +11,10 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 class ChatScreen extends StatelessWidget {
-  final chatController = Get.put(NewChatContoller());
+  final chatController = Get.put(ChatContoller1());
   var userUid = FirebaseAuth.instance.currentUser!.uid;
-  ChatScreen({super.key});
+  final String selectedUserID;
+  ChatScreen({super.key, required this.selectedUserID});
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +41,13 @@ class ChatScreen extends StatelessWidget {
       body: Column(children: [
         Expanded(
             child: StreamBuilder<QuerySnapshot>(
-                stream: chatController.getMessageByStream(),
+                stream: chatController
+                    .getMessageByStream(chatController.currentUserID),
                 builder: (context, snapshot) {
                   List<Widget> chatMessages = [];
-
+                  if (!snapshot.hasData) {
+                    return CircularProgressIndicator();
+                  }
                   if (snapshot.hasData) {
                     if (snapshot.data!.docs.length < 1) {
                       return Container();
@@ -76,7 +81,9 @@ class ChatScreen extends StatelessWidget {
                   }
                   return Container();
                 })),
-        InputMsg(iconColor: const Color.fromRGBO(0, 140, 180, 1))
+        InputMsg(
+            selectedUserID: chatController.currentUserID,
+            iconColor: const Color.fromRGBO(0, 140, 180, 1))
       ]),
     );
   }

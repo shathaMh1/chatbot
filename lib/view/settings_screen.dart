@@ -65,7 +65,7 @@ class SettingsScreen extends StatelessWidget {
                     child: GestureDetector(
                       onTap: () {
                         // chatController.getChatID(chatController.currentUserID);
-                        Get.to(() => ChatScreen());
+                        Get.to(() => ChatScreen(selectedUserID: chatController.currentUserID,));
                       },
                       child: ListTile(
                         leading: Image.asset('assets/images/contact.png'),

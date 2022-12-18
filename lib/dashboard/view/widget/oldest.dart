@@ -35,6 +35,7 @@ class OldestChat extends StatelessWidget {
                                     .doc(snapshot.data!.docs[index].id)
                                     .update({'status': 'isOpened'});
                                 Get.to(() => AdminChatWidget(
+                                    selectedUserID: controller.selectedUserID,
                                     docID: snapshot.data!.docs[index].id));
                               },
                               child: Card(

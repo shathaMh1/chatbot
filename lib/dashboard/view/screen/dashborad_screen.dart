@@ -46,21 +46,3 @@ class DashboardScreen extends StatelessWidget {
 
 // my layout design to dashboard! didn't workout. 
 
-// Scaffold(
-//         body: Row(
-//       children: [
-//         SideBarWidget(),
-//         Column(
-//           children: [
-//             AppBarWidget(),
-//             Row(
-//               children: const [
-//                 ChatList(),
-//                 AdminChat(),
-//               ],
-//             )
-//           ],
-//         ),
-//         const UserProfile(),
-//       ],
-//     ));

@@ -1,3 +1,4 @@
+import 'package:chatbot_template/controller/chat_controller_1.dart';
 import 'package:chatbot_template/controller/new_chat_controller.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/admin_response.dart';
 import 'package:chatbot_template/view/widgets/chat%20widgets/input_send_msg.dart';
@@ -9,10 +10,11 @@ import 'package:get/get.dart';
 
 class AdminChatWidget extends StatelessWidget {
   final String docID;
-  final chatController = Get.put(NewChatContoller());
+  final chatController = Get.put(ChatContoller1());
+  final String selectedUserID;
   //var userUid = FirebaseAuth.instance.currentUser!.uid;
 
-  AdminChatWidget({super.key, required this.docID});
+  AdminChatWidget({super.key, required this.docID, required this.selectedUserID});
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -25,18 +27,13 @@ class AdminChatWidget extends StatelessWidget {
         ),
         Expanded(
             child: StreamBuilder<QuerySnapshot>(
-                stream: FirebaseFirestore.instance
-                    .collection('users')
-                    .doc("vJI1WLlXPucQmbvcpl5zfsAa5W33")
-                    .collection('messages')
-                    .doc(docID)
-                    .collection('chats')
-                    .orderBy('time', descending: true)
-                    .snapshots(),
+                stream: chatController.getMessageByStream(docID),
                 builder: (context, snapshot) {
-                  print(snapshot.data!.docs.length);
                   List<Widget> chatMessages = [];
-                  if (snapshot.hasData) {
+                    if (!snapshot.hasData) {
+                    return CircularProgressIndicator();
+                  }
+                 else if (snapshot.hasData) {
                     if (snapshot.data!.docs.length < 1) {
                       return Container();
                     }
@@ -70,7 +67,7 @@ class AdminChatWidget extends StatelessWidget {
                   }
                   return Container();
                 })),
-        InputMsg()
+        InputMsg(selectedUserID: selectedUserID,)
       ]),
     );
   }
